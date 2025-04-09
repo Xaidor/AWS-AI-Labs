@@ -3,12 +3,16 @@ import boto3
 import json
 import os
 
+load_dotenv()
+aws_region = os.getenv("AWS_REGION")
+print(aws_region) # For debugging, checking to see if the value read correctly
 app = Flask(__name__)
 
 # Titan-based LangCoach logic
 def call_bedrock(user_input):
     #AWS has 2 seperate clients for Bedrock "bedrock" and bedrock-runtime
-    bedrock = boto3.client("bedrock-runtime", region_name="us-east-1")
+    bedrock = boto3.client(service_name="bedrock-runtime", region_name=aws_region)
+
 
     system_prompt = f"""
 You are a French language coach with a thick Jamaican accent. The user is a beginner student trying to improve their grammar and fluency.
@@ -32,7 +36,7 @@ Your response:
 
     response = bedrock.invoke_model(
         modelId="amazon.titan-text-express-v1",
-        body=json.dumps(body),
+        body=json.dumps(kwarg),
         contentType="application/json",
         accept="application/json"
     )
