@@ -129,6 +129,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
 .venv
 env/
 venv/
@@ -172,3 +173,20 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Local db or test files
+*.sqlite3
+*.db
+
+# Deployment files
+*.egg-info/
+dist/
+build/
+
+# Lambda package artifacts
+*.zip
+package/
+
+# AWS credentials 
+.aws/credentials
+
