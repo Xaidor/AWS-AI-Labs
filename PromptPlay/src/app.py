@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 # Titan-based LangCoach logic
 def call_bedrock(user_input):
+    #AWS has 2 seperate clients for Bedrock "bedrock" and bedrock-runtime
     bedrock = boto3.client("bedrock-runtime", region_name="us-east-1")
 
     system_prompt = f"""
@@ -22,15 +23,11 @@ User said: "{user_input}"
 
 Your response:
 """
-
-    body = {
-        "inputText": system_prompt,
-        "textGenerationConfig": {
-            "temperature": 0.7,
-            "topP": 0.9,
-            "maxTokenCount": 300,
-            "stopSequences": []
-        }
+    kwarg = {
+        "modelId": "amazon.titan-text-premier-v1:0",
+        "contentType": "application/json",
+        "accept": "application/json",
+        "body": "{\"inputText\":system_promt,\"textGenerationConfig\":{\"maxTokenCount\":300,\"stopSequences\":[],\"temperature\":0.7,\"topP\":0.9}}"
     }
 
     response = bedrock.invoke_model(
