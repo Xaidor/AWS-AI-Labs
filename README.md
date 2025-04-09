@@ -9,7 +9,7 @@ Welcome! This repo is my hands-on exploration of AWS Bedrock and GenAI services 
 
 - Tools: Flask, Python, boto3, Bedrock
 - Concepts: Prompt engineering, API integration, IAM roles
-- [Code →](./promptplay)
+- [Code →](./PromptPlay)
 
 ---
 
@@ -18,7 +18,7 @@ Welcome! This repo is my hands-on exploration of AWS Bedrock and GenAI services 
 
 - Tools: AWS Lambda, S3, DynamoDB, Bedrock
 - Concepts: Document ingestion, vector storage, summarization
-- [Code →](./smartassist)
+- [Code →](./SmartAssist)
 
 ---
 
@@ -27,7 +27,7 @@ Welcome! This repo is my hands-on exploration of AWS Bedrock and GenAI services 
 
 - Tools: EventBridge, Step Functions, Bedrock, SNS
 - Concepts: Event-driven design, orchestration, notifications
-- [Code →](./insightflow)
+- [Code →](./InsightFlow)
 
 ---
 
@@ -59,8 +59,6 @@ I’m Kaylen, a Cloud DevOps Engineer & AWS Community Builder diving deep into m
 ---
 
 ## ⚡ Setup Instructions
-
-_(This can go inside each project folder too)_
 
 ```bash
 git clone https://github.com/yourusername/aws-ai-lab.git
