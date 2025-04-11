@@ -33,17 +33,14 @@ Welcome! This repo is my hands-on exploration of AWS Bedrock and GenAI services 
 
 ## 🛠️ Tech Stack
 
-- AWS Bedrock (Titan, Claude, etc.)
+- AWS Bedrock (Titan)
 - Python, Flask
 - S3, Lambda, DynamoDB, EventBridge, SNS
 - IAM, boto3, API Gateway
-- HTML/CSS (for light UI)
+- HTML/CSS 
 
 ---
 
-## ✨ About Me
-
-I’m Kaylen, a Cloud DevOps Engineer & AWS Community Builder diving deep into machine learning and GenAI. I love building practical tools with a focus on accessibility, clarity, and *a little bit of sparkle* 💫
 
 [📬 Connect with me on LinkedIn](https://www.linkedin.com/in/kaylenanderson)
 
@@ -54,7 +51,6 @@ I’m Kaylen, a Cloud DevOps Engineer & AWS Community Builder diving deep into m
 - [x] Project 1: Build & test Bedrock prompt app
 - [ ] Project 2: Add document summarization pipeline
 - [ ] Project 3: Build full event-driven architecture
-- [ ] Write blog posts for each project!
 
 ---
 
